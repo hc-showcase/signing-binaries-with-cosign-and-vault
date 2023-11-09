@@ -1,5 +1,6 @@
 # Signing binaries with Cosign and Vault
 ```
+export VAULT_ADDR=http://localhost:8200
 export VAULT_TOKEN=root
 
 install-cosign.sh
