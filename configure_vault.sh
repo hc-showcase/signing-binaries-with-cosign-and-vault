@@ -3,19 +3,19 @@ export VAULT_TOKEN=root
 vault secrets enable transit
 
 vault policy write signing-policy - << EOF
-path "transit/keys/cosign" {
+path "transit/keys/code-signing" {
   capabilities = ["read"]
 }
 
-path "transit/hmac/cosign/*" {
+path "transit/hmac/code-signing/*" {
   capabilities = ["update"]
 }
 
-path "transit/sign/cosign/*" {
+path "transit/sign/code-signing/*" {
   capabilities = ["update"]
 }
 
-path "transit/verify/cosign" {
+path "transit/verify/code-signing" {
   capabilities = ["create"]
 }
 EOF
