@@ -8,7 +8,7 @@ start-vault.sh
 
 configure-vault.sh
 
-cosign generate-key-pair --kms hashivault://code-signing
+cosign generate-key-pair --kms hashivault://code-signing 
 Public key written to cosign.pub
 
 cosign sign-blob --key hashivault://code-signing --output-signature signature_of_blob.sig ~/Downloads/20220129214115086_003194.pdf                                                            
