@@ -9,9 +9,13 @@ start-vault.sh
 configure-vault.sh
 
 cosign generate-key-pair --kms hashivault://code-signing 
+
 Public key written to cosign.pub
 
+
+
 cosign sign-blob --key hashivault://code-signing --output-signature signature_of_blob.sig ~/Downloads/20220129214115086_003194.pdf                                                            
+
 Using payload from: /Users/mkaesz/Downloads/20220129214115086_003194.pdf
 
         The sigstore service, hosted by sigstore a Series of LF Projects, LLC, is provided pursuant to the Hosted Project Tools Terms of Use, available at https://lfprojects.org/policies/hosted-project-tools-terms-of-use/.
@@ -25,6 +29,8 @@ tlog entry created with index: 48657111
 Wrote signature to file signature_of_blob.sig
 
 
+
 cosign verify-blob --key hashivault://code-signing --signature signature_of_blob.sig ~/Downloads/20220129214115086_003194.pdf
+
 Verified OK
 ```
