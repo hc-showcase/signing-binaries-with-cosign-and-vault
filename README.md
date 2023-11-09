@@ -1,5 +1,5 @@
 # Signing binaries with Cosign and Vault
-
+```
 export VAULT_TOKEN=root
 
 install-cosign.sh
